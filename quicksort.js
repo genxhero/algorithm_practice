@@ -6,15 +6,16 @@ const quicksort = (array, firstIndex, lastIndex) => {
 }
 
 const partition = (array, firstIndex, lastIndex) => {
-    i = first
+    let i = first
+    let pivot = array[last]
+    let index = first
     while (i < last) {
-
-    if (array[i] <= pivot) {
-        temp = array[i]
-        arr[i] = array[index]
-        array[index] = temp
-        index += 1
-    }
+        if (array[i] <= pivot) {
+            let temp = array[i]
+            array[i] = array[index]
+            array[index] = temp
+            index += 1
+        }
     i += 1
 }
     temp = array[index]
