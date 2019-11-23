@@ -39,7 +39,8 @@ const parse_ones = (integer) => {
 }
 
 const parse_tens = (integer) => {
-
+    const hash = { 0: "", 1: "X", 2: "XX", 3: "XXX", 4: "XL", 5: "L", 6: "LX", 7: "LXX", 8: "LXXX", 9: "XC" }
+    return hash[integer]
 }
 
 const parse_hundreds = (integer) => {
@@ -49,3 +50,5 @@ const parse_hundreds = (integer) => {
 const parse_thousands = (integer) => {
 
 }
+
+console.log(romanize(999))
