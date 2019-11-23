@@ -1,5 +1,5 @@
 class Array
-    def quicksort(self, first = 0, last = self.length-1)
+    def quicksort(arr = self, first = 0, last = self.length-1)
         if first < last
             index = partition(arr, first, last)
             self.quicksort(self, first, index - 1)
