@@ -10,11 +10,13 @@ def romanize_number(integer)
 end
 
 def parse_ones(integer)
-    hash = { 0 => "", 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "IV", 6 => "VI", 7 => "VII", 8 => "VIII", 9 => "IX"}
-    return hash[integer]
+    hash = { 0 => "", 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "IV", 6 => "VI", 7 => "VII", 8 => "VIII", 9 => "IX" }
+    hash[integer]
 end
 
 def parse_tens(integer)
+    hash = { 0 => "", 1 => "X", 2 => "XX", 3 => "XXX", 4 => "XL", 5 => "L", 6 => "LX", 7 => "LXX", 8 => "LXXX", 9 => "XC"}
+    hash[integer]
 end
 
 def parse_hundreds(integer)
