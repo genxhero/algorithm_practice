@@ -1,15 +1,17 @@
 const quicksort = (array, firstIndex, lastIndex) => {
-    index = partition(array, firstIndex, lastIndex)
-    quicksort(array, firstIndex, index - 1)
-    quicksort(array, index + 1, lastIndex)
-
+    if (firstIndex < lastIndex) {
+        index = partition(array, firstIndex, lastIndex)
+        quicksort(array, firstIndex, index - 1)
+        quicksort(array, index + 1, lastIndex)
+    }
+    return array
 }
 
 const partition = (array, firstIndex, lastIndex) => {
-    let i = first
-    let pivot = array[last]
-    let index = first
-    while (i < last) {
+    let i = firstIndex
+    let pivot = array[lastIndex]
+    let index = firstIndex
+    while (i < lastIndex) {
         if (array[i] <= pivot) {
             let temp = array[i]
             array[i] = array[index]
@@ -20,7 +22,7 @@ const partition = (array, firstIndex, lastIndex) => {
 }
     temp = array[index]
     array[index] = pivot
-    array[last] = temp
+    array[lastIndex] = temp
     return index
 }
 
