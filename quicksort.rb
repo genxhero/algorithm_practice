@@ -28,4 +28,4 @@ def partition(arr, first, last)
 end
 
 test_arr_a = [4, 1, 10, 6, 7, 2]
-puts quicksort(test_arr_a, test_arr_a.first, test_arr_a.last).inspect
+puts quicksort(test_arr_a, 0, test_arr_a.length-1).inspect
