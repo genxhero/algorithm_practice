@@ -1,4 +1,11 @@
 
+/**
+ * Inspired by a recent interview I had, this is the JavaScript version of my ruby solution.
+ * TODO: Add an even higher function that checks whether a number is greater than 3,999.  If it is, 
+ * Return "max string * (number / 3999)" and call romanize on the remainder.  If % 3999 === 0, tack on ""
+ * otherwise, "+ romanize(number % 3999)"
+ */
+
 const romanize = (integer) => {
     let result = "";
     const digits = `${integer}`.split("").map(digit => parseInt(digit));
