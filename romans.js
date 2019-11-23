@@ -1,10 +1,16 @@
 
 /**
  * Inspired by a recent interview I had, this is the JavaScript version of my ruby solution.
- * TODO: Add an even higher function that checks whether a number is greater than 3,999.  If it is, 
- * Return "max string * (number / 3999)" and call romanize on the remainder.  If % 3999 === 0, tack on ""
- * otherwise, "+ romanize(number % 3999)"
+ * I also added functionality for bigger numbers.
  */
+
+const superRomanize = (integer) => {
+    if (integer <= 3999){
+        return romanize(integer)
+    } else {
+        return `MMMCMXCIX times ${parseInt(integer / 3999)} plus ${romanize(integer % 3999)}`
+    }
+}
 
 const romanize = (integer) => {
     let result = "";
@@ -26,7 +32,7 @@ const romanize = (integer) => {
         result += parse_tens(digits[length-2]);
     }
 
-    if (length >= 2) {
+    if (length >= 1) {
         result += parse_ones(digits[length-1]);
     }
 
@@ -54,3 +60,5 @@ const parse_thousands = (integer) => {
 }
 
 console.log(romanize(999))
+console.log(superRomanize(4000))
+console.log(superRomanize(4244))
