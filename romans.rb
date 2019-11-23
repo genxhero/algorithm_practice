@@ -25,4 +25,9 @@ def parse_hundreds(integer)
 end
 
 def parse_thousands(integer)
+    hash = {0 => "", 1 => "M", 2 => "MM", 3 => "MMM"}
+    hash[integer]
 end
+
+puts romanize_number(42)
+puts romanize_number(3480)
