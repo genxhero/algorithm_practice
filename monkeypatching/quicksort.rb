@@ -32,4 +32,4 @@ private
 end
 
 unsorted = [10, 4, 37, 2, 5, 21, 8, 11, 3]
-puts unsorted.quicksort
+puts unsorted.quicksort.inspect
