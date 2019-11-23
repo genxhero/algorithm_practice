@@ -9,8 +9,8 @@ const quicksort = (array, firstIndex, lastIndex) => {
 
 const partition = (array, firstIndex, lastIndex) => {
     let i = firstIndex
-    let pivot = array[lastIndex]
-    let index = firstIndex
+    let pivot = array[lastIndex] //Pivot element
+    let index = firstIndex 
     while (i < lastIndex) {
         if (array[i] <= pivot) {
             let temp = array[i]
