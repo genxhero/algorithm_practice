@@ -45,11 +45,12 @@ const parse_tens = (integer) => {
 
 const parse_hundreds = (integer) => {
     hash = { 0: "", 1: "C", 2: "CC", 3: "CCC", 4: "CD", 5: "D", 6: "DC", 7: "DCC", 8: "DCCC", 9: "CM" }
-    hash[integer]
+    return hash[integer]
 }
 
 const parse_thousands = (integer) => {
-
+    hash = { 0: "", 1: "M", 2: "MM", 3: "MMM" }
+    return hash[integer]
 }
 
 console.log(romanize(999))
