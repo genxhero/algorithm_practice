@@ -28,9 +28,13 @@ end
 def is_prime?(num)
     return false if num == 1
     return true if num == 2
+    return false if (2..Math.sqrt(num)).any? { |divisor| num % divisor == 0}
+    true
 end
 
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
 puts "If you don't see 0, 1, 1, 2, 3, 5, 8, 13 then the code isn't working."
 puts "Factorial 4 should be 24.  Result: #{factorial(4)}"
+puts "7 is a prime number, so this should return true: #{is_prime?(7)}"
+puts "24 is not a prime number, so this should return false: #{is_prime?(24)}"
