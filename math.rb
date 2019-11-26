@@ -22,7 +22,10 @@ def factorial(num)
 end
 
 def recursive_factorial(num)
-    return 1 if num == 0
+    return [1] if num == 1
+    factorials = factorials_rec(num-1)
+    factorials << factorials.last * (num-1)
+    factorials
 end
 
 def is_prime?(num)
@@ -37,7 +40,7 @@ def digital_root(num)
     next_thing = digital_root(num / 10) + digital_root(num % 10)
     return next_thing if next_thing < 10
     digital_root(next_thing)
-  end
+end
 
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
