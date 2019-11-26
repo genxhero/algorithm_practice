@@ -17,6 +17,7 @@ end
 
 #doing this from memory could be wrong
 def factorial(num)
+    return 1 if num == 0
     (1..num).inject(:*) 
 end
 
