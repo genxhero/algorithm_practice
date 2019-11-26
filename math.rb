@@ -32,6 +32,13 @@ def is_prime?(num)
     true
 end
 
+def digital_root(num)
+    return num if num < 10
+    next_thing = digital_root(num / 10) + digital_root(num % 10)
+    return next_thing if next_thing < 10
+    digital_root(next_thing)
+  end
+
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
 puts "If you don't see 0, 1, 1, 2, 3, 5, 8, 13 then the code isn't working."
