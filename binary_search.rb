@@ -9,3 +9,4 @@ def binary_search(arr, target)
        result.nil? ?  nil : mid + result + 1
      end
 end
+#procedure: type out above ad nauseum and then comment it out
