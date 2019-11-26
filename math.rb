@@ -42,6 +42,14 @@ def digital_root(num)
     digital_root(next_thing)
 end
 
+def exponent(b, n)
+    return 1 if n == 0
+    if n > 0
+      b * exponent(b, n-1)
+    else 1.0/b * exponent(b, n+1)
+    end
+end
+
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
 puts "If you don't see 0, 1, 1, 2, 3, 5, 8, 13 then the code isn't working."
