@@ -21,6 +21,13 @@ def factorial(num)
     (1..num).inject(:*) 
 end
 
+def recursive_factorial(num)
+    return 1 if num == 0
+end
+
+def is_prime?(num)
+end
+
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
 puts "If you don't see 0, 1, 1, 2, 3, 5, 8, 13 then the code isn't working."
