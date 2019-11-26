@@ -26,6 +26,8 @@ def recursive_factorial(num)
 end
 
 def is_prime?(num)
+    return false if num == 1
+    return true if num == 2
 end
 
 
