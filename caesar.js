@@ -1,7 +1,9 @@
-import {LIBRARY} from './constants';
+import {ALPHABET} from './constants';
 
 
 
 const caesar = (string, offset) => {
-
+    array = string.split('')
+    const library = {' ': ' ', '.':'.', ',': ',', '!': '!', '-': '-'};
+    
 }
