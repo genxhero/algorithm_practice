@@ -10,5 +10,8 @@ const caesar = (string, offset) => {
     array = string.split('')
     const library = {' ': ' ', '.':'.', ',': ',', '!': '!', '-': '-'};
     const encoded = rotation(offset);
-
+    const result = array.map( (letter) => {
+        return library[letter]
+    })
+    return result;
 }
