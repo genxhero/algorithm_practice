@@ -2,7 +2,6 @@
 
 def caesar(string, offset)
     arr = string.split('')
-    result = []
     alphabet = ("a".."z").to_a
     encoded = alphabet.rotate(offset)
     library = {" ": " ", ".": ".", "!": "!", ",": ","}
@@ -12,3 +11,6 @@ def caesar(string, offset)
     result = arr.map{|el| library[el] }
     result.join('')
 end
+
+
+puts "First "
