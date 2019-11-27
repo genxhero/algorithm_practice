@@ -18,3 +18,6 @@ const caesar = (string, offset) => {
     })
     return result.join('');
 }
+
+console.log("First cypher - with an offset of 3, wxyz should be zabc");
+console.log(`Result: ${caesar("wxyz", 3)}`)
