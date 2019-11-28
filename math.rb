@@ -1,3 +1,4 @@
+
 def fibonacci(n)
     return [0] if n == 1
     return [0, 1] if n == 2
@@ -109,6 +110,21 @@ def coin_sums(num)
               idx6.step(0, -2){|idx7| 
                 permies += 1}}}}}}} 
   return permies
+end
+
+
+def fib_of_a_certain_digit(num)
+    fibs = [1, 1]
+    idx = 1
+    while true 
+      fib = fibs[idx] + fibs[idx-1]
+      fibs << fib
+      idx += 1
+      digilength = fib.to_s.split("").length
+      break if digilength == num
+     end
+      puts "The first #{num} digit Fibonacci number is at index #{idx}, it's the #{fibs.length}#{st_rd_th(fibs.length)} number in the sequence. "
+      puts "Or, using Project Euler's odd choice of phrasing, the index of the first Fibonacci number to have #{num} digits is: #{fibs.length}"
 end
 
 puts threesnfives(10).inspect #23 - original example
