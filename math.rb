@@ -68,6 +68,15 @@ def special_triplet(target)
   end
 end
 
+#Without using .digits
+def factorial_sum(num)
+  num_str = factorial(num).to_s
+  num_arr = num_str.split("")
+  digits = []
+  num_arr.each {|num| digits << num.to_i}
+  digi_sum = digits.inject(:+)
+end
+
 puts threesnfives(10).inspect #23 - original example
 puts threesnfives(1000).inspect #233168.  Would be 234168 if we were including 1000 itself.
 
