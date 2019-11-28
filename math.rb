@@ -50,6 +50,27 @@ def exponent(b, n)
     end
 end
 
+def threesnfives(highnum)
+  sum = 0
+  (0...highnum).each {|num| sum += num if num % 3 == 0 or num % 5 == 0}
+  sum
+end
+
+def special_triplet(target)
+  (Math.sqrt(target).to_i..target/3).each do |a_side|
+    (Math.sqrt(target).to_i..target/2).each do |b_side|
+      hypotenuse = Math.sqrt(a_side**2+b_side**2)
+      total = a_side+b_side+hypotenuse
+      product = a_side*b_side*hypotenuse
+      selected = "A: #{a_side} < B: #{b_side} < C: #{hypotenuse.to_i}"
+      return "The special triplet is #{selected}. Their product is #{product.to_i}" if (a_side < b_side) && (b_side < hypotenuse) && (total == target)
+    end
+  end
+end
+
+puts threesnfives(10).inspect #23 - original example
+puts threesnfives(1000).inspect #233168.  Would be 234168 if we were including 1000 itself.
+
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
 puts "If you don't see 0, 1, 1, 2, 3, 5, 8, 13 then the code isn't working."
