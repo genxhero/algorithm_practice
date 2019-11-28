@@ -98,6 +98,19 @@ def largest_prime_factor(num)
     prime_factors.last
 end
 
+def coin_sums(num)
+  permies = 0
+  num.step(0, -200) {|idx1| 
+    idx1.step(0, -100) {|idx2|
+      idx2.step(0, -50){|idx3|
+        idx3.step(0, -20){|idx4| 
+          idx4.step(0, -10){|idx5| 
+            idx5.step(0, -5){|idx6| 
+              idx6.step(0, -2){|idx7| 
+                permies += 1}}}}}}} 
+  return permies
+end
+
 puts threesnfives(10).inspect #23 - original example
 puts threesnfives(1000).inspect #233168.  Would be 234168 if we were including 1000 itself.
 
