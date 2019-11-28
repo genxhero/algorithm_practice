@@ -77,6 +77,27 @@ def factorial_sum(num)
   digi_sum = digits.inject(:+)
 end
 
+def generate_factors(num) 
+    factors = [1, num]
+    dividend = num
+   (2...Math.sqrt(num)).each do |divisor|
+      if dividend % divisor == 0
+        factors << divisor unless factors.include?(divisor)
+        factors << dividend/divisor unless factors.include?(dividend/divisor)
+      end
+        dividend = num
+    end
+    factors.sort!
+end
+
+def largest_prime_factor(num)
+    return "That number, #{num}, is prime!" if is_prime?(num) == true
+    factors = generate_factors(num)
+    prime_factors = []
+    factors.each {|factor| prime_factors << factor if is_prime?(factor) == true}
+    prime_factors.last
+end
+
 puts threesnfives(10).inspect #23 - original example
 puts threesnfives(1000).inspect #233168.  Would be 234168 if we were including 1000 itself.
 
