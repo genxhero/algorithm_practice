@@ -7,9 +7,11 @@ const  binary_search = (arr, target) => {
         return mid
     }
      if (arr[mid] > target) {
-         return binary_search(arr.take(mid), target)
+         return binary_search(arr.slice(mid), target)
      } else { 
-         result = binary_search(arr.drop(mid + 1), target)
+         result = binary_search(arr.slice(mid, arr.length), target)
      }
       return !result ?  null : (mid + result + 1)
 }
+
+console.log(binary_search([1, 3, 5, 7, 9], 5))
