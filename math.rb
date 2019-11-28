@@ -1,3 +1,11 @@
+def st_rd_th(num)
+    arr = num.to_s.split("")
+    return "st" if arr.last == "1"
+    return "nd" if arr.last == "2" unless arr.last(2) == ["1", "2"]
+    return "rd" if arr.last == "3" unless arr.last(2) == ["1", "3"]
+    return "th"
+end
+
 
 def fibonacci(n)
     return [0] if n == 1
