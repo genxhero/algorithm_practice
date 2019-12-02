@@ -27,8 +27,11 @@
 
  const stringWithinString = (bigString, smallString) => {
      const hash = {};
-     const permutations = findPermutations(smallString)
-     
+     const permutations = findPermutations(smallString);
+     for (let i = 0; i < permutations.length; i++) {
+         hash[permutations[i]] = true
+     }
+    return hash     
  }
 
- console.log(findPermutations("yes")) 
+ console.log(stringWithinString("yesyesyes", "yes")) 
