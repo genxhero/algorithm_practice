@@ -31,7 +31,9 @@
      for (let i = 0; i < permutations.length; i++) {
          hash[permutations[i]] = true
      }
-    return hash     
+     let start = 0;
+     let end = smallString.length - 1
+     let count = 0;
  }
 
  console.log(stringWithinString("yesyesyes", "yes")) 
