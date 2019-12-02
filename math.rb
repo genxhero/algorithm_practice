@@ -1,3 +1,12 @@
+def st_rd_th(num)
+    arr = num.to_s.split("")
+    return "st" if arr.last == "1"
+    return "nd" if arr.last == "2" unless arr.last(2) == ["1", "2"]
+    return "rd" if arr.last == "3" unless arr.last(2) == ["1", "3"]
+    return "th"
+end
+
+
 def fibonacci(n)
     return [0] if n == 1
     return [0, 1] if n == 2
@@ -49,6 +58,85 @@ def exponent(b, n)
     else 1.0/b * exponent(b, n+1)
     end
 end
+
+def threesnfives(highnum)
+  sum = 0
+  (0...highnum).each {|num| sum += num if num % 3 == 0 or num % 5 == 0}
+  sum
+end
+
+def special_triplet(target)
+  (Math.sqrt(target).to_i..target/3).each do |a_side|
+    (Math.sqrt(target).to_i..target/2).each do |b_side|
+      hypotenuse = Math.sqrt(a_side**2+b_side**2)
+      total = a_side+b_side+hypotenuse
+      product = a_side*b_side*hypotenuse
+      selected = "A: #{a_side} < B: #{b_side} < C: #{hypotenuse.to_i}"
+      return "The special triplet is #{selected}. Their product is #{product.to_i}" if (a_side < b_side) && (b_side < hypotenuse) && (total == target)
+    end
+  end
+end
+
+#Without using .digits
+def factorial_sum(num)
+  num_str = factorial(num).to_s
+  num_arr = num_str.split("")
+  digits = []
+  num_arr.each {|num| digits << num.to_i}
+  digi_sum = digits.inject(:+)
+end
+
+def generate_factors(num) 
+    factors = [1, num]
+    dividend = num
+   (2...Math.sqrt(num)).each do |divisor|
+      if dividend % divisor == 0
+        factors << divisor unless factors.include?(divisor)
+        factors << dividend/divisor unless factors.include?(dividend/divisor)
+      end
+        dividend = num
+    end
+    factors.sort!
+end
+
+def largest_prime_factor(num)
+    return "That number, #{num}, is prime!" if is_prime?(num) == true
+    factors = generate_factors(num)
+    prime_factors = []
+    factors.each {|factor| prime_factors << factor if is_prime?(factor) == true}
+    prime_factors.last
+end
+
+def coin_sums(num)
+  permies = 0
+  num.step(0, -200) {|idx1| 
+    idx1.step(0, -100) {|idx2|
+      idx2.step(0, -50){|idx3|
+        idx3.step(0, -20){|idx4| 
+          idx4.step(0, -10){|idx5| 
+            idx5.step(0, -5){|idx6| 
+              idx6.step(0, -2){|idx7| 
+                permies += 1}}}}}}} 
+  return permies
+end
+
+
+def fib_of_a_certain_digit(num)
+    fibs = [1, 1]
+    idx = 1
+    while true 
+      fib = fibs[idx] + fibs[idx-1]
+      fibs << fib
+      idx += 1
+      digilength = fib.to_s.split("").length
+      break if digilength == num
+     end
+      puts "The first #{num} digit Fibonacci number is at index #{idx}, it's the #{fibs.length}#{st_rd_th(fibs.length)} number in the sequence. "
+      puts "Or, using Project Euler's odd choice of phrasing, the index of the first Fibonacci number to have #{num} digits is: #{fibs.length}"
+end
+
+puts threesnfives(10).inspect #23 - original example
+puts threesnfives(1000).inspect #233168.  Would be 234168 if we were including 1000 itself.
 
 
 puts "The first eight fibonacci numbers are: #{fibonacci(8)}"
