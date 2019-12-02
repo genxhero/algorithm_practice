@@ -24,8 +24,17 @@
     }
     return results;
  }
-/**To fix by eod: not catching last permutation because it is short circuiting when end === bigString.length */
+
  const stringWithinString = (bigString, smallString) => {
+     //Corner case, when inputs get reversed.
+     if (bigString.length < smallString.length) {
+         return 0;
+     }     
+     //Corner case, when strings are the same.
+     if (bigString === smallString) {
+         return 1
+     }
+
      const hash = {};
      const permutations = findPermutations(smallString);
      for (let i = 0; i < permutations.length; i++) {
@@ -35,7 +44,7 @@
      let end = smallString.length;
      let count = 0;
      let window;
-     while (end < bigString.length) {
+     while (end < bigString.length + 1) {
         window = bigString.slice(start, end);
         if (hash[window]) {
             count += 1
@@ -46,4 +55,4 @@
      return count;
  }
 
- console.log(stringWithinString("buttersnugglebuttkooooooobutt", "butt")) 
+ console.log(stringWithinString("buttersnugglebuttkoooooobut", "butt")) 
