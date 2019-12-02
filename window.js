@@ -16,7 +16,7 @@
     {
       const firstChar = string[i];
       const otherChar = string.substring(0, i) + string.substring(i + 1);
-      const otherPermutations = getPermutations(otherChar);
+      const otherPermutations = findPermutations(otherChar);
 
       for (var j = 0; j < otherPermutations.length; j++) {
         results.push(firstChar + otherPermutations[j]);
