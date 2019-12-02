@@ -12,13 +12,16 @@
       return results;
     }
 
-    for (var i = 0; i < string.length; i++) 
+    for (let i = 0; i < string.length; i++) 
     {
       const firstChar = string[i];
+      //i === 1, substring 0, i would be b.
+      // substring i + 1 (2) would make it "tt"
+      //so otherChar of butt would be btt
       const otherChar = string.substring(0, i) + string.substring(i + 1);
       const otherPermutations = findPermutations(otherChar);
 
-      for (var j = 0; j < otherPermutations.length; j++) {
+      for (let j = 0; j < otherPermutations.length; j++) {
         results.push(firstChar + otherPermutations[j]);
       }
     }
@@ -30,7 +33,7 @@
      if (bigString.length < smallString.length) {
          return 0;
      }     
-     //Corner case, when strings are the same.
+     //Corner case, when strings are the same. Maybe es7 will feature one-line return ifs like Ruby?
      if (bigString === smallString) {
          return 1
      }
