@@ -24,7 +24,7 @@
     }
     return results;
  }
-
+/**To fix by eod: not catching last permutation because it is short circuiting when end === bigString.length */
  const stringWithinString = (bigString, smallString) => {
      const hash = {};
      const permutations = findPermutations(smallString);
@@ -34,13 +34,16 @@
      let start = 0;
      let end = smallString.length;
      let count = 0;
+     let window;
      while (end < bigString.length) {
-        if (hash[bigString.slice(start, end)]) {
+        window = bigString.slice(start, end);
+        if (hash[window]) {
             count += 1
         } 
-        start, end += 1
+        start += 1; 
+        end += 1;
      }
      return count;
  }
 
- console.log(stringWithinString("yesyesyes", "yes")) 
+ console.log(stringWithinString("buttersnugglebuttkooooooobutt", "butt")) 
