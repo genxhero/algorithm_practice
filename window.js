@@ -25,4 +25,10 @@
     return results;
  }
 
+ const stringWithinString = (bigString, smallString) => {
+     const hash = {};
+     const permutations = findPermutations(smallString)
+     
+ }
+
  console.log(findPermutations("yes")) 
