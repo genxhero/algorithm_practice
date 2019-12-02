@@ -32,8 +32,15 @@
          hash[permutations[i]] = true
      }
      let start = 0;
-     let end = smallString.length - 1
+     let end = smallString.length;
      let count = 0;
+     while (end < bigString.length) {
+        if (hash[bigString.slice(start, end)]) {
+            count += 1
+        } 
+        start, end += 1
+     }
+     return count;
  }
 
  console.log(stringWithinString("yesyesyes", "yes")) 
