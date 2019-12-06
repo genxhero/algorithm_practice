@@ -1,3 +1,3 @@
 const isBalanced = () => {
-    
+    const openers = {"(": ")", "[": "]", "{":"}"};
 }
