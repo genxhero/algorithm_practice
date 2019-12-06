@@ -5,7 +5,9 @@ def balanced?(string)
      stack = []
      string.split('').each do |char|
         stack << char if openers[char]
-        
-        
+        if closers[char]
+            (stack.last !== openers[char] || stack.length === 0) ? return false : stack.pop
+        end
      end
+     return true
 end
