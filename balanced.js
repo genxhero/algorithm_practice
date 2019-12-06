@@ -24,3 +24,4 @@ const isBalanced = (string) => {
 
 console.log(isBalanced("(){}[]"))
 console.log(isBalanced("]["))
+console.log(isBalanced("{{[]}}"))
