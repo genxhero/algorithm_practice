@@ -4,4 +4,8 @@ const isBalanced = (string) => {
     if (closers[string[0]]) {
         return false;
     }
+
+    for (let i = 0; i < string.length; i++) {
+        
+    }
 }
