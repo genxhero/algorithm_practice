@@ -11,6 +11,12 @@ const isBalanced = (string) => {
             stack.push(string[i])
         }
 
-        if ()
+        if (closers[string[i]]) {
+            if (stack[stack.length-1] !== openers[string[i]] || stack.length === 0) {
+                return false
+            } else {
+                stack.pop;
+            }
+        }
     }
 }
