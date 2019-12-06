@@ -1,7 +1,7 @@
 const isBalanced = (string) => {
     const openers = {"(": ")", "[": "]", "{":"}"};
     const closers = {")": "(", "]": "[", "}": "{"};
-    if (closers[string[0]] || string.length > 2) {
+    if (closers[string[0]] || string.length > 2 || string.length % 2 !== 0)  {
         return false;
     }
 
