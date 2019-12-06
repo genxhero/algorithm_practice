@@ -11,3 +11,7 @@ def balanced?(string)
      end
      return true
 end
+
+puts balanced?("(){}[]")
+puts balanced?("][")
+puts balanced?("{{[]}}")
