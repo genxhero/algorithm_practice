@@ -5,7 +5,12 @@ const isBalanced = (string) => {
         return false;
     }
 
+    let stack = [];
     for (let i = 0; i < string.length; i++) {
-        
+        if(openers[string[i]]) {
+            stack.push(string[i])
+        }
+
+        if ()
     }
 }
