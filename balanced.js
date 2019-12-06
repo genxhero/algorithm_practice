@@ -18,5 +18,8 @@ const isBalanced = (string) => {
                 stack.pop;
             }
         }
+        return true;
     }
 }
+
+console.log(isBalanced("(){}[]"))
