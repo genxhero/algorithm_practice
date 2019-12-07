@@ -13,6 +13,6 @@ def balanced?(string)
      return true
 end
 
-# puts balanced?("(){}[]")
-puts balanced?("][")
-# puts balanced?("{{[]}}")
+puts balanced?("(){}[]") #Expect true
+puts balanced?("][") #Expect false
+puts balanced?("{{[]}}") #expect true
