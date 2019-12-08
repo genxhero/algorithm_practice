@@ -9,13 +9,13 @@
 
     for ( i = 0; i < string.length; i++) 
     {
-      const firstChar = string[i];
-      const otherChar = string.substring(0, i) + string.substring(i + 1);
-      const otherPermutations = findPermutations(otherChar);
+       firstChar = string[i];
+       otherChar = string[0..i] + string[i + 1];
+       otherPermutations = permutations(otherChar);
 
       for (let j = 0; j < otherPermutations.length; j++) {
-        results.push(firstChar + otherPermutations[j]);
+        results << (firstChar + otherPermutations[j]);
       }
     }
-    return results;
+    results
 end
