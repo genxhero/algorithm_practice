@@ -19,6 +19,8 @@
 end
 
 def string_within_string(big, small)
+    return 0 if big.length < small.length
+ 
 end
 
 puts permutations("butt").inspect
