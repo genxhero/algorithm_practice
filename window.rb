@@ -18,4 +18,7 @@
     results
 end
 
+def string_within_string(big, small)
+end
+
 puts permutations("butt").inspect
