@@ -23,6 +23,7 @@ def string_within_string(big, small)
     return 1 if big == small
     hash = {};
     permutations = permutations(small);
+    permutations.each {|perm| hash[perm] = true }
 end
 
 puts permutations("butt").inspect
