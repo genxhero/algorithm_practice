@@ -8,8 +8,7 @@
 
     (0...string.length).each do |i| 
         firstChar = string[i];
-        otherChar = string[0..i] + string[(i + 1)..-1];
-        puts firstChar
+        otherChar = string[0...i] + string[(i + 1)..-1];
         otherPermutations = permutations(otherChar);
 
         (0...otherPermutations.length).each do |j| 
@@ -19,4 +18,4 @@
     results
 end
 
-puts permutations("ba")
+puts permutations("butt").inspect
