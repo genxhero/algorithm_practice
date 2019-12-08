@@ -26,4 +26,4 @@ def string_within_string(big, small)
     permutations.each {|perm| hash[perm] = true }
 end
 
-puts permutations("butt").inspect
+puts string_within_string("buttuber", "butt") #should be 2
