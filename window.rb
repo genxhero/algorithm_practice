@@ -28,8 +28,9 @@ def string_within_string(big, small)
     count = 0;
     finish = small.length;
     while (finish < big.length)
-        window = big[start..finish];
+        window = big[start...finish];
         count += 1 if hash[window]
+        puts window
         start += 1
         finish += 1
     end
