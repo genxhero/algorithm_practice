@@ -25,7 +25,15 @@ def string_within_string(big, small)
     permutations = permutations(small);
     permutations.each {|perm| hash[perm] = true }
     start = 0;
+    count = 0;
     finish = smallString.length;
+    while (finish < big.length)
+        window = big[start..finish];
+        count += 1 if hash[window]
+        start += 1
+        finish += 1
+    end
+    count
 end
 
 puts string_within_string("buttuber", "butt") #should be 2
