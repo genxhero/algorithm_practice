@@ -26,7 +26,7 @@ def string_within_string(big, small)
     permutations.each {|perm| hash[perm] = true }
     start = 0;
     count = 0;
-    finish = smallString.length;
+    finish = small.length;
     while (finish < big.length)
         window = big[start..finish];
         count += 1 if hash[window]
