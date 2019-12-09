@@ -24,6 +24,8 @@ def string_within_string(big, small)
     hash = {};
     permutations = permutations(small);
     permutations.each {|perm| hash[perm] = true }
+    start = 0;
+    finish = smallString.length;
 end
 
 puts string_within_string("buttuber", "butt") #should be 2
