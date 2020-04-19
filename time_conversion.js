@@ -1,4 +1,4 @@
-function timeConversion = (s) => {
+const timeConversion = (s) => {
     const amPm = s.slice(-2)
     const hour = parseInt(s.slice(0, 2))
     const minute = s.slice(3, 5)
