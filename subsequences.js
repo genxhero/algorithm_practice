@@ -11,6 +11,7 @@ const getSubsequences = arr => {
        winSize += 1
     }
     subs.push([])
+    console.log(subs)
     return subs;
 }
 
@@ -23,7 +24,6 @@ const getStrictlyIncreasing = arr => {
                 if (arr[i].length === maxLength) {
                     maxCount += 1
                 } else if (arr[i].length > maxLength) {
-                    console.log("Bigger length, resetting", arr[i])
                     maxCount = 1;
                     maxLength = arr[i].length
                 }
@@ -37,7 +37,7 @@ const isSorted = arr => {
         return true;
     }
     for (let i=0; i < arr.length; i++) {
-       if (arr[i] > arr[i + 1]) {
+       if (arr[i+1] && arr[i] > arr[i + 1] ) {
            return false
        }   
     }
@@ -47,6 +47,6 @@ const isSorted = arr => {
 
 // console.log(getSubsequences([2, 1, 3]))
 
-const subbies = getSubsequences([2, 3, 1])
-
+const subbies = getSubsequences([8, 7, 1, -9, -4, 5, 4,4,-3,8])
+//Expected 8 2
 console.log(getStrictlyIncreasing(subbies))
