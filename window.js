@@ -58,4 +58,4 @@
      return count;
  }
 
- console.log(stringWithinString("buttersnugglebuttkoooooobut", "butt")) 
+console.log(stringWithinString("ersnugglettubkooobutterobut", "butt")) 
