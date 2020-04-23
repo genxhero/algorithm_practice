@@ -34,7 +34,7 @@ const romanToInteger = roman => {
                 if (prev === "I" ) {
                     result += 9
                     break;
-                } else if (next === "C") {
+                } else if (next === "C" || next === "L") {
                     result += 0
                     break;
                 } else {
@@ -59,4 +59,5 @@ const romanToInteger = roman => {
 // console.log(romanToInteger("MCMLXXXV")) //1985
 // console.log(romanToInteger("MCMLXXXIV"))  //1984
 console.log(romanToInteger("MCMXCV")) //1995
-console.log(romanToInteger("MCDLXXVI")) //Should be 1476, is 1576
+console.log(romanToInteger("MCDLXXVI")) //1476
+console.log(romanToInteger("MMMXLV")) //Should be 3045, is 3055
