@@ -10,33 +10,26 @@ const romanToInteger = roman => {
                 prev === "C" ? result += 900 : result += 1000
                 break;
             }
-
             case "D": {
               prev === "C" ? result += 400 : result += 500
                 break;
             }
-
             case "C": {
                 if (next === "M") {
-                    console.log("Next is M, adding nothing.")
                     result += 0
                     break;
                 } else if(prev === "X")  {
-                    console.log("Prev was x, adding 90")
                         result += 90
                         break;
                     } else {
-                        console.log("neither x nor m involved, adding 100")
                         result += 100
                         break;
                 }
             }
-
             case "L": {
                 prev === "X" ? result += 40 : result += 50
                 break;
             }
-
             case "X": {
                 if (prev === "I" ) {
                     result += 9
@@ -49,12 +42,10 @@ const romanToInteger = roman => {
                     break;
                 }
             }
-
             case "V": {
                prev === "I" ? result += 4 : result += 5
                break;
             }
-
             case "I": {
                 (next === "V" || next === "X") ? result += 0 : result += 1
                 break;
