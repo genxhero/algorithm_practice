@@ -20,11 +20,7 @@ const romanToInteger = roman => {
             }
 
             case "D": {
-
-            }
-
-            case "D": {
-
+                prev === "C" ? result += 400 : result += 500
             }
 
             case "C": {
@@ -32,19 +28,19 @@ const romanToInteger = roman => {
             }
 
             case "L": {
-
+                prev === "X" ? result += 40 : result += 50
             }
 
             case "X": {
-
+                prev === "I" ? result += 9 : result += 10
             }
 
             case "V": {
-
+                prev === "I" ? result += 4 : result += 5
             }
 
             case "I": {
-
+                (next === "V" || next === "X") ? result += 0 : result += 1
             }
         }
     }
