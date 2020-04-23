@@ -15,7 +15,7 @@ const romanToInteger = roman => {
                 break;
             }
             case "C": {
-                if (next === "M") {
+                if (next === "M" || next === "D") {
                     result += 0
                     break;
                 } else if(prev === "X")  {
@@ -58,4 +58,5 @@ const romanToInteger = roman => {
 // console.log(romanToInteger("MM"))
 // console.log(romanToInteger("MCMLXXXV")) //1985
 // console.log(romanToInteger("MCMLXXXIV"))  //1984
-console.log(romanToInteger("MCMXCV")) //should be 1995 but because of the case with C it won't work.
+console.log(romanToInteger("MCMXCV")) //1995
+console.log(romanToInteger("MCDLXXVI")) //Should be 1476, is 1576
