@@ -11,6 +11,7 @@ const romanToInteger = roman => {
     for (let i=0; i < roman.length; i++) {
         result += numeralHash[roman[i]]
     }
+    return result;
 }
 
 console.log(romanToInteger("MM"))
