@@ -11,20 +11,10 @@ const romanToInteger = roman => {
                 break;
             }
             case "D": {
-              prev === "C" ? result += 400 : result += 500
+                prev === "C" ? result += 400 : result += 500
                 break;
             }
             case "C": {
-                // if (next === "M" || next === "D") {
-                //     result += 0
-                //     break;
-                // } else if(prev === "X")  {
-                //         result += 90
-                //         break;
-                //     } else {
-                //         result += 100
-                //         break;
-                // }
                 result += handleC(prev, next );
                 break;
             }
@@ -33,16 +23,6 @@ const romanToInteger = roman => {
                 break;
             }
             case "X": {
-                // if (prev === "I" ) {
-                //     result += 9
-                //     break;
-                // } else if (next === "C" || next === "L") {
-                //     result += 0
-                //     break;
-                // } else {
-                //     result += 10
-                //     break;
-                // }
                 result += handleX(prev, next);
                 break;
             }
