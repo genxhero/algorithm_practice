@@ -1,0 +1,3 @@
+const longestCommonPrefix = strings => {
+    
+}
