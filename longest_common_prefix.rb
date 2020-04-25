@@ -1,12 +1,17 @@
 
 
 def longest_common_prefix(strings)
+    return "" if strings.empty? || strings.all? {|string| string == "" }
+    return strings.first if strings.length == 1
     result = ""
     shortest = strings.min_by(&:length)
-    (0..shortest.length).each do |i|
+    puts shortest
+    (0...shortest.length).each do |i|
+        puts("Shortest: #{shortest} Index: #{i}")
+        break if strings.any? {|string| string[i] != shortest[i]}
         result += shortest[i] if strings.all? {|string| string[i] == shortest[i]}
     end
     result
 end
 
-puts longest_common_prefix(["flow", "flower", "florist", "flour"]) #Should be "flo"
+puts longest_common_prefix(["aca","cba"]) #Should be ""
