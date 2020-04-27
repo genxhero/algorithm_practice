@@ -1,5 +1,4 @@
 def three_sum(array)
-    hash = {}
     
 end
 
