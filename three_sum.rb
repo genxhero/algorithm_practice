@@ -1,11 +1,15 @@
 def three_sum(array)
-    combinations = array.combination(3).map {|comb| comb.sort}
+    combinations = array.combination(3).to_a
     result = []
     exist_hash = {}
     combinations.each do |comb| 
-        #result << comb if !exist_hash[comb] && comb.inject(:+) == 0 
         result << comb if !exist_hash[comb] && (comb[0] + comb[1] + comb[2]) == 0 
         exist_hash[comb] = true
+        exist_hash[[comb[0], comb[2], comb[1]]] = true
+        exist_hash[[comb[2], comb[0], comb[1]]] = true
+        exist_hash[[comb[2], comb[1], comb[0]]] = true
+        exist_hash[[comb[1], comb[0], comb[2]]] = true
+        exist_hash[[comb[1], comb[2], comb[0]]] = true
      end
     result
 end
