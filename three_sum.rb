@@ -3,7 +3,8 @@ def three_sum(array)
     result = []
     exist_hash = {}
     combinations.each do |comb| 
-        result << comb if !exist_hash[comb] && comb.inject(:+) == 0 
+        #result << comb if !exist_hash[comb] && comb.inject(:+) == 0 
+        result << comb if !exist_hash[comb] && (comb[0] + comb[1] + comb[2]) == 0 
         exist_hash[comb] = true
      end
     result
