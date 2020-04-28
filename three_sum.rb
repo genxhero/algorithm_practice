@@ -1,12 +1,11 @@
 def three_sum(array)
-    perms = array.permutation(3).map {|perm| perm.sort}
+    combinations = array.combination(3).map {|perm| perm.sort}
     result = []
-    hash = {}
-    # result = perms.select {|perm| perm.inject(:+) == 0}
-    perms.each do |perm| 
-        result << perm if !hash[perm] && perm.inject(:+) == 0
-        hash[perm] = true
-    end
+    exist_hash = {}
+    combinations.each do |comb| 
+        result << comb if !exist_hash[comb] && comb.inject(:+) == 0 
+        exist_hash[comb] == true
+     end
     result
 end
 
