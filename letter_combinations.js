@@ -15,12 +15,20 @@ const letter_combinations = digits => {
     }
 
     const firstInitials = library[digits[0]];
+    const rest = digits.slice(1).split('')
     let result = [];
     for (let i=0; i < firstInitials.length; i++) {
-        result.push(firstInitials[i])
+        for (let j = 0; j < digits.length; j++) {
+            result.push(firstInitials[i])
+        }
     }
+    console.log(rest)
+    for (let i = 0; i < result.length; i++) {
+        let current = library[rest[i]]
+        console.log(current)
+    } 
 
-    
+
 
     
 }
