@@ -22,12 +22,19 @@ const letter_combinations = digits => {
             result.push(firstInitials[i])
         }
     }
-    console.log(rest)
+    // console.log(rest)
     for (let i = 0; i < result.length; i++) {
-        let current = library[rest[i]]
+        for (let k=0; k < rest.length; k++) {
+           let current = library[rest[k]]      
+            for (let j = 0; j < current.length; j++) {
+                result[i] += current[j]
+            }    
+        }
+            
+
     } 
 
-
+return result;
 
     
 }
