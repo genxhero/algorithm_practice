@@ -1,3 +1,7 @@
+/**
+ * Hardcore permutations 
+ */
+
 const letter_combinations = digits => {
     const library = {
         '2': ['a', 'b', 'c'],
@@ -9,4 +13,6 @@ const letter_combinations = digits => {
         '8': ['t', 'u', 'v'],
         '9': ['w', 'x', 'y', 'z']
     }
+
+    
 }
