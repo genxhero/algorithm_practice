@@ -16,3 +16,5 @@ const letter_combinations = digits => {
 
     
 }
+
+console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
