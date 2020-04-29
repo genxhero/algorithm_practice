@@ -25,7 +25,6 @@ const letter_combinations = digits => {
     console.log(rest)
     for (let i = 0; i < result.length; i++) {
         let current = library[rest[i]]
-        console.log(current)
     } 
 
 
