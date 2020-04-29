@@ -14,7 +14,16 @@ const letter_combinations = digits => {
         '9': ['w', 'x', 'y', 'z']
     }
 
+    const firstInitials = library[digits[0]];
+    let result = [];
+    for (let i=0; i < firstInitials.length; i++) {
+        result.push(firstInitials[i])
+    }
+
+    
+
     
 }
+
 
 console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
