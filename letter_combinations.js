@@ -14,11 +14,14 @@ const letter_combinations = digits => {
         '9': ['w', 'x', 'y', 'z']
     }
 
+    //Notice: there may be an issue when seven or nine is involved. might need to base second loop below on presence of seven or 9 since that would
+    //increase the amount of required first initials from three to four, since it increases the overall combo count
+
     const firstInitials = library[digits[0]];
     const rest = digits.slice(1).split('')
     let result = [];
     for (let i=0; i < firstInitials.length; i++) {
-        for (let j = 0; j < digits.length; j++) {
+        for (let j = 0; j < firstInitials.length; j++) {
             result.push(firstInitials[i])
         }
     }
