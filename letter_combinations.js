@@ -3,7 +3,7 @@
  */
 
 const letter_combinations = digits => {
-    if (digits === "") return digits
+    if (digits === "" || digits.length === 1) return digits
     const library = {
         '2': ['a', 'b', 'c'],
         '3': ['d', 'e', 'f'],
