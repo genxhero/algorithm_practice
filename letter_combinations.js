@@ -3,7 +3,7 @@
  */
 
 const letter_combinations = digits => {
-    if (digits === "" || digits.length === 1) return digits
+    if (digits === "" ) return []
     const library = {
         '2': ['a', 'b', 'c'],
         '3': ['d', 'e', 'f'],
@@ -14,6 +14,7 @@ const letter_combinations = digits => {
         '8': ['t', 'u', 'v'],
         '9': ['w', 'x', 'y', 'z']
     }
+    if (digits.length === 1) return library[digits[0]]
 
     //Notice: there may be an issue when seven or nine is involved. might need to base second loop below on presence of seven or 9 since that would
     //increase the amount of required first initials from three to four, since it increases the overall combo count
