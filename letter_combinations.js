@@ -68,4 +68,10 @@ return result;
 
 
 // console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-console.log(letter_combinations("293")) //Should be on the order of ["awd", "awe", "awf", "axd", "axe", "axf" ..rest]
+console.log(letter_combinations("234")) 
+//Should be 
+///          ["adg","adh","adi","aeg","aeh","aei","afg","afh","afi",
+//           "bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi",
+//           "cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"]
+//Is coming out as
+//          ["adg","aeh","afi","bdg","beh","bfi","cdg","ceh","cfi"]
