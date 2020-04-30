@@ -3,6 +3,7 @@
  */
 
 const letter_combinations = digits => {
+    if (digits === "") return digits
     const library = {
         '2': ['a', 'b', 'c'],
         '3': ['d', 'e', 'f'],
@@ -66,4 +67,4 @@ return result;
 
 
 // console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-console.log(letter_combinations("293")) //Should be on the order of ["a"]
+console.log(letter_combinations("293")) //Should be on the order of ["awd", "awe", "awf", "axd", "axe", "axf" ..rest]
