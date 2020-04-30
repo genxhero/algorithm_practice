@@ -15,53 +15,20 @@ const letter_combinations = digits => {
         '9': ['w', 'x', 'y', 'z']
     }
     if (digits.length === 1) return library[digits[0]]
-
-    //Notice: there may be an issue when seven or nine is involved. might need to base second loop below on presence of seven or 9 since that would
-    //increase the amount of required first initials from three to four, since it increases the overall combo count
-
-    const firstInitials = library[digits[0]];
-    const longest = (digits.includes('7') || digits.includes('9')) ? 4 : 3
-    const rest = digits.slice(1).split('')
-    let result = [];
-    for (let i=0; i < firstInitials.length; i++) {
-        for (let j = 0; j < longest; j++) {
-            result.push(firstInitials[i])
-        }
-    }
-    // for (let i = 0; i < result.length; i++) {
-    //     for (let k=0; k < rest.length; k++) {
-    //        let current = library[rest[k]]      
-    //         for (let j = 0; j < current.length; j++) {
-    //             result[j] += current[j]
-    //         }    
-    //     }
-            
-
-    // } 
-
-    for (let i=0; i< rest.length; i++) {
-        let current = library[rest[i]]   //[d, e, f]  
-
-        let j = 0
-        let k = 0;
-        let sectionSize = 1;
-   
-        while (j < result.length) {
-
-            // console.log("Result String: ", result[j], "J:", j, "K", k, "SectionSize: ", sectionSize)
-            result[j] += current[k]
-                if (sectionSize === longest) {
-                    k = 0;
-                    sectionSize = 1;
-                } else {
-                    k++;
-                    sectionSize += 1
-                }
-                j++
+    let result = ['']
+    let index = 0
+    while (index < digits.length) {
+        const next = library[digits[index]]
+        const nextResult = []
+        for (let i = 0; i < result.length; i++) {
+            for (let j = 0; j < next.length; j++) {
+                nextResult.push(result[i] + next[j])
             }
+        }
+        result = nextResult
+        index++
     }
-
-return result;
+    return result
 
     
 }
