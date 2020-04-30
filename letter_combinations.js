@@ -18,10 +18,11 @@ const letter_combinations = digits => {
     //increase the amount of required first initials from three to four, since it increases the overall combo count
 
     const firstInitials = library[digits[0]];
+    const longest = (digits.includes('7') || digits.includes('9')) ? 4 : 3
     const rest = digits.slice(1).split('')
     let result = [];
     for (let i=0; i < firstInitials.length; i++) {
-        for (let j = 0; j < firstInitials.length; j++) {
+        for (let j = 0; j < longest; j++) {
             result.push(firstInitials[i])
         }
     }
