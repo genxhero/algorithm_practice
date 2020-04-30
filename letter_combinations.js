@@ -23,16 +23,25 @@ const letter_combinations = digits => {
         }
     }
     // console.log(rest)
-    for (let i = 0; i < result.length; i++) {
-        for (let k=0; k < rest.length; k++) {
-           let current = library[rest[k]]      
-            for (let j = 0; j < current.length; j++) {
-                result[i] += current[j]
-            }    
-        }
+    // for (let i = 0; i < result.length; i++) {
+    //     for (let k=0; k < rest.length; k++) {
+    //        let current = library[rest[k]]      
+    //         for (let j = 0; j < current.length; j++) {
+    //             result[j] += current[j]
+    //         }    
+    //     }
             
 
-    } 
+    // } 
+
+    for (let i=0; i< rest.length; i++) {
+        let current = library[rest[i]]      
+        for (let j=0; j < result.length; j++) {
+            for (let k = 0; k <current.length; k++ ){
+                result[j] += current[k]
+            }
+        }
+    }
 
 return result;
 
