@@ -40,12 +40,26 @@ const letter_combinations = digits => {
 
     for (let i=0; i< rest.length; i++) {
         let current = library[rest[i]]   //[d, e, f]  
-        for (let j=0; j < current.length; j++) { // j = 0, current[0] is d
-            for (let k = 0; k < result.length; k++ ){
-                console.log("Result K:", result[k], "Current J:", current[j])
-                result[k] += current[j]
+
+        let j = 0
+        let k = 0;
+        let sectionSize = 1;
+   
+        while (j < result.length) {
+
+            console.log("Result String: ", result[j], "J:", j, "K", k, "SectionSize: ", sectionSize)
+            result[j] += current[k]
+                if (sectionSize === longest) {
+                    console.log("sectionSize too big: ", sectionSize)
+                    k = 0;
+                    sectionSize = 1;
+                } else {
+                    k++;
+                    sectionSize += 1
+                }
+                
+                j++
             }
-        }
     }
 
 return result;
