@@ -22,7 +22,7 @@ const letter_combinations = digits => {
             result.push(firstInitials[i])
         }
     }
-    // console.log(rest)
+    console.log(result)
     // for (let i = 0; i < result.length; i++) {
     //     for (let k=0; k < rest.length; k++) {
     //        let current = library[rest[k]]      
@@ -35,10 +35,11 @@ const letter_combinations = digits => {
     // } 
 
     for (let i=0; i< rest.length; i++) {
-        let current = library[rest[i]]      
-        for (let j=0; j < result.length; j++) {
-            for (let k = 0; k <current.length; k++ ){
-                result[j] += current[k]
+        let current = library[rest[i]]   //[d, e, f]  
+        for (let j=0; j < current.length; j++) { // j = 0, current[0] is d
+            for (let k = 0; k < result.length; k++ ){
+                console.log("Result K:", result[k], "Current J:", current[j])
+                result[k] += current[j]
             }
         }
     }
