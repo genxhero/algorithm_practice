@@ -26,7 +26,6 @@ const letter_combinations = digits => {
             result.push(firstInitials[i])
         }
     }
-    console.log(result)
     // for (let i = 0; i < result.length; i++) {
     //     for (let k=0; k < rest.length; k++) {
     //        let current = library[rest[k]]      
@@ -47,17 +46,15 @@ const letter_combinations = digits => {
    
         while (j < result.length) {
 
-            console.log("Result String: ", result[j], "J:", j, "K", k, "SectionSize: ", sectionSize)
+            // console.log("Result String: ", result[j], "J:", j, "K", k, "SectionSize: ", sectionSize)
             result[j] += current[k]
                 if (sectionSize === longest) {
-                    console.log("sectionSize too big: ", sectionSize)
                     k = 0;
                     sectionSize = 1;
                 } else {
                     k++;
                     sectionSize += 1
                 }
-                
                 j++
             }
     }
@@ -68,4 +65,5 @@ return result;
 }
 
 
-console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+// console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+console.log(letter_combinations("293")) //Should be on the order of ["a"]
