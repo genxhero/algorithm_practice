@@ -16,17 +16,17 @@ const letter_combinations = digits => {
     }
     if (digits.length === 1) return library[digits[0]]
     let result = ['']
-    let index = 0
-    while (index < digits.length) {
-        const next = library[digits[index]]
+    let idx = 0
+    while (idx < digits.length) {
+        const current = library[digits[idx]]
         const nextResult = []
         for (let i = 0; i < result.length; i++) {
-            for (let j = 0; j < next.length; j++) {
-                nextResult.push(result[i] + next[j])
+            for (let j = 0; j < current.length; j++) {
+                nextResult.push(result[i] + current[j])
             }
         }
         result = nextResult
-        index++
+        idx += 1;
     }
     return result
 
@@ -35,7 +35,8 @@ const letter_combinations = digits => {
 
 
 // console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-console.log(letter_combinations("234")) 
+console.log(letter_combinations("234").length)
+// console.log(["adg","adh","adi","aeg","aeh","aei","afg","afh","afi","bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi", "cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"].length)
 //Should be 
 ///          ["adg","adh","adi","aeg","aeh","aei","afg","afh","afi",
 //           "bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi",
