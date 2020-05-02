@@ -1,3 +1,9 @@
+/**
+ * Tests whether a string is balanced. 
+ * 
+ * @param {String} string 
+ */
+
 const isBalanced = (string) => {
     const openers = {"(": ")", "[": "]", "{":"}"};
     const closers = {")": "(", "]": "[", "}": "{"};
