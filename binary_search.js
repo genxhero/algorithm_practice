@@ -1,3 +1,7 @@
+/*
+    It's Binary Search. Check left 
+*/
+
 const  binary_search = (arr, target) => {
      if (arr.length <= 1) {
          return null
