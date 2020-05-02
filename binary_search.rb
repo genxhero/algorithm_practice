@@ -1,3 +1,5 @@
+#Binary search, sorted array, cut off half the array every time, log n time
+
 def binary_search(arr, target)
     return nil if arr.length <= 1
      mid = arr.length / 2
