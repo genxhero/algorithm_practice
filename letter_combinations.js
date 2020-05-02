@@ -36,10 +36,4 @@ const letter_combinations = digits => {
 
 // console.log(letter_combinations("23")) // Should be  ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
 console.log(letter_combinations("234").length)
-// console.log(["adg","adh","adi","aeg","aeh","aei","afg","afh","afi","bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi", "cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"].length)
-//Should be 
-///          ["adg","adh","adi","aeg","aehdfg","aei","afg","afh","afi",
-//           "bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi",
-//           "cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"]
-//Is coming out as
-//          ["adg","aeh","afi","bdg","beh","bfi","cdg","ceh","cfi"]
+
