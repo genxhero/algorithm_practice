@@ -1,3 +1,10 @@
+/**
+ * Finds the median of two sorted arrays
+ * 
+ * @param {*} nums1 
+ * @param {*} nums2 
+ */
+
 const findMedianSortedArrays = (nums1, nums2) => {
     const newNums = nums1.concat(nums2).sort((a, b) => { return a - b });
     console.log(newNums)
