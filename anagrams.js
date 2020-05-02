@@ -1,3 +1,9 @@
+/**
+ * This removes all words that are anagrams of other words inside of an array of strings.
+ * 
+ * @param {String} text 
+ */
+
 const funWithAnagrams = (text) => {
 
     const newArr = [];
