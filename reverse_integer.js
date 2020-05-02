@@ -1,3 +1,8 @@
+/**
+ * Reverse an integer by turning it into a string, reversing it, and parsing it as a int
+ * @param {Integer} x 
+ */
+
 const reverseInteger = x => {
     let result;
     if (x < 0) {
