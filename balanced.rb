@@ -1,3 +1,5 @@
+#tests whether a string is balanced, ruby edition
+
 def balanced?(string)
      openers = {"(": ")", "[": "]", "{": "}"};
      closers = {")": "(", "]": "[", "}": "{"};
