@@ -1,3 +1,5 @@
+//Shortest birthday candles.  that is, a kid can only blow out the shortest.
+
 const readline = require('readline');
 const fs = require("fs");
 
