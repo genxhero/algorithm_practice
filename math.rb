@@ -1,3 +1,6 @@
+# A collection of Math based algorithms
+
+
 def st_rd_th(num)
     arr = num.to_s.split("")
     return "st" if arr.last == "1"
