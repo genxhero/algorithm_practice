@@ -1,4 +1,5 @@
 #Caesar Cypher - using no %, and no orm.
+#Basically all you need is to rotate the array at the offset
 
 def caesar(string, offset)
     arr = string.downcase.split('')
