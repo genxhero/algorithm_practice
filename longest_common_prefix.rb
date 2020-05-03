@@ -1,4 +1,5 @@
-
+#longest common prefix, ruby edition.
+#Example: "action", "achtung", "actor" would return "ac"
 
 def longest_common_prefix(strings)
     return "" if strings.empty? || strings.all? {|string| string == "" }
