@@ -1,3 +1,7 @@
+/**
+ * COmpares triplets, two arrays of constant size 3
+ */
+
 const compareTriplets = (a, b) => {
     let aScore = 0;
     let bScore = 0;
