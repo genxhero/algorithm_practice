@@ -10,3 +10,8 @@ const miniMaxSum = (arr) => {
     console.log(minSum, maxSum)
 
 }
+
+/**
+ * max of the sum of the two arrays.
+ * maxSum([1,2,3])
+ */
