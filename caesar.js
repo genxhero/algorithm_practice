@@ -1,3 +1,7 @@
+/**
+ * Caesar Cipher for JavaScript, using a custom rotation subroutine.
+ */
+
 import {ALPHABET} from './constants';
 
 const rotation = (offset) => {
