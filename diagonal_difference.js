@@ -1,3 +1,7 @@
+/**
+ * Diff between diagonal sums.
+ */
+
 const  diagonalDifference = (arr) => {
     const diagA = getTopDownDiagonal(arr)
     const diagB = getBottumUpDiagonal(arr)
