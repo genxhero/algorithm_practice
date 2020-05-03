@@ -1,3 +1,9 @@
+/**
+ * Finds the max area of  check leetcode
+ * 
+ * @param {*} height 
+ */
+
 const maxArea = (height) => {
 
     let maxArea = 0;
