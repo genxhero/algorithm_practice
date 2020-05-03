@@ -1,3 +1,6 @@
+//Returns the length of the longest substring of a string???
+//Wouldnt that be the string itself, usually??
+
 const lengthOfLongestSubstring = string => {
     const hash = {}
     let start = 0
