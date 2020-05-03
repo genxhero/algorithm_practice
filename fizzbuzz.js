@@ -1,3 +1,5 @@
+//Classic fizz buzz problem
+
 function fizzBuzz(n) {
 
     for (let num = 1; num <= n; num++) {
