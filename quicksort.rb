@@ -1,3 +1,7 @@
+#Quick sort but with Ruby
+
+
+
 def quicksort(arr, first, last)
   if first < last
     index = partition(arr, first, last)
