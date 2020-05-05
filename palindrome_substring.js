@@ -10,3 +10,5 @@ const findSubstrings = string => {
 const longestPalindromeSubstring = string => {
     const subs = findSubstrings(string);
 }
+
+//finds substrings and finds longest palindromics
