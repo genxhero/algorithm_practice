@@ -1,3 +1,7 @@
+/** 
+ * The Algorithm that needs no introductions. Recursive quicksort partitions an array around a pivot.
+ */
+
 const quicksort = (array, firstIndex, lastIndex) => {
     if (firstIndex < lastIndex) {
         index = partition(array, firstIndex, lastIndex)
