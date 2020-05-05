@@ -1,3 +1,6 @@
+#Converts a sentence into pig latin.
+
+
 def front_letters(word)
  letters = word.split("")
  first_consonants = []
