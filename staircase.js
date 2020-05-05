@@ -1,3 +1,5 @@
+//Creates a staircase in the console based on the number of steps
+
 const staircase = (n) => {
     let numSteps = 1
     let numSpaces = n - 1;
