@@ -1,3 +1,8 @@
+/**
+ * Counts the number of zeroes, positive numbers, and negative numbers - then prints them onscreen
+ */
+
+
 const plusMinus = (arr) => {
     const denominator = arr.length;
     let negatives = 0;
