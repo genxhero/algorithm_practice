@@ -1,0 +1,3 @@
+/**
+ * Pig Latin, JavaScript edition.
+ */
