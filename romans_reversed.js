@@ -1,3 +1,8 @@
+/** 
+ * Converts a string of roman numerals into an integer.  
+ * TODO: Make it prettier. Case statement still pretty big despite turning C and X cases into subroutines
+ */
+
 const romanToInteger = roman => {
 
     let result = 0;
