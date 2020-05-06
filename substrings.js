@@ -6,3 +6,5 @@ const findSubstrings = string => {
     }
     return result;
 }
+
+//Find all Substrings
