@@ -1,3 +1,5 @@
+#thruples that add to zero
+
 def three_sum(array)
     combinations = array.combination(3).to_a
     result = []
