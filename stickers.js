@@ -1,3 +1,5 @@
+//How many stickers required for using only....huh wheres the rest of my code?
+
 const stickers_for = (phrase) => {
     const arr = phrase.replace(/\s+/g, '').split('')
     let stickersNeeded = 1;
