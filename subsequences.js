@@ -1,3 +1,5 @@
+//Strictly increasing subsequences
+
 const getSubsequences = arr => {
     let subs = [];
     let winSize = 1;
