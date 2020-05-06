@@ -1,3 +1,5 @@
+//Convert normal time to army time
+
 const timeConversion = (s) => {
     const amPm = s.slice(-2)
     const hour = parseInt(s.slice(0, 2))
