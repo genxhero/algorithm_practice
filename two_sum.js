@@ -11,3 +11,5 @@ const twoSum = (nums, target) => {
 
     return false
 };
+
+//see if tuple adds to zero
