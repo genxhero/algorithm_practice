@@ -1,9 +1,11 @@
-def fibonacci(n)
-return [0] if n == 1
-    return [0, 1] if n == 2
-    result = [0, 1]
-while result.length < n 
-        result << result[result.length - 1] + result[result.length - 2]
-end
-result
-end
+const fibonacci = (n) => {
+    if (n === 1) return [0];
+    if (n === 2) return [0, 1];
+    let result = [0, 1]
+    while (result.length < n) {
+        result.push(result[result.length - 1] + result[result.length - 2])
+    }
+    return result
+
+}
+
