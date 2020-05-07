@@ -1,18 +1,28 @@
-//Merge sort for javascript\
-function mergeSort(unsortedArray) {
-    // No need to sort the array if the array only has one element or empty
-    if (unsortedArray.length <= 1) {
-        return unsortedArray;
+
+
+function mergeSort(org) {
+    if (org.length == 1) {
+        return org;
     }
-    // In order to divide the array in half, we need to figure out the middle
-    const middle = Math.floor(unsortedArray.length / 2);
+    let mid = Math.floor(org.length / 2),
+        left = org.slice(0, mid),
+        right = org.slice(mid);
 
-    // This is where we will be dividing the array into left and right
-    const left = unsortedArray.slice(0, middle);
-    const right = unsortedArray.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+}
 
-    // Using recursion to combine the left and right
-    return merge(
-        mergeSort(left), mergeSort(right)
-    );
+function merge(left, right) {
+    let lIndex = 0,
+        rIndex = 0,
+        result = [];
+    while (lIndex < left.length && rIndex < right.length) {
+        if (left[lIndex] > right[rIndex]) {
+            result.push(right[rIndex]);
+            rIndex++;
+        } else {
+            result.push(left[lIndex]);
+            lIndex++;
+        }
+    }
+    return result.concat(left.slice(lIndex), right.slice(rIndex));
 }
