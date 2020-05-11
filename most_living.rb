@@ -36,8 +36,9 @@ people =
 
 
 
-#What about in the case of ties?
- #O ^ N*2 I reckon given the select inside of the each loop.
+#***************************************************************************************************
+#************************************Brute Force Solution O(N*2)************************************
+#***************************************************************************************************
 
 def most_living_brut(people)
     years = {}
@@ -47,6 +48,11 @@ def most_living_brut(people)
     biggest = years.max_by {|k, v| v}
     "The most populous year was #{biggest[0]}, with a total of #{biggest[1]}"
 end
+
+
+#***************************************************************************************************
+#******************************Better Solution O(People + Years)************************************
+#***************************************************************************************************
 
 
 def most_living_dry(people)
@@ -67,6 +73,10 @@ def most_living_dry(people)
      res = years.max_by {|k, v| v[:population] } 
     "Year: #{res[0]}, Population: #{res[1][:population]}"
 end
+
+#***************************************************************************************************
+#******************************Best Solution using Helper Methods***********************************
+#***************************************************************************************************
 
 def most_living_helpers(people)
     start = people.min_by { |k| k[:born] }[:born]
