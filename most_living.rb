@@ -68,6 +68,35 @@ def most_living_dry(people)
     "Year: #{res[0]}, Population: #{res[1][:population]}"
 end
 
+def most_living_helpers(people)
+    start = people.min_by { |k| k[:born] }[:born]
+    finish = people.max_by{ |k| k[:born] }[:born]
+    years = get_years(people)
+    years = get_populations(years, start, finish)
+    res = years.max_by {|k, v| v[:population] } 
+    "Year: #{res[0]}, Population: #{res[1][:population]}"
+end
+
+def get_years(people)
+    years = {}
+    (people).each do |person|
+        years[person[:born]] ? years[person[:born]][:change] += 1 : years[person[:born]] = {change: 1, population: 0}
+        years[person[:died] + 1] ? years[person[:died] +1 ][:change] -= 1 : years[person[:died] +1] = {change: -1, population: 0}
+    end
+    years
+end
+
+def get_populations(years, start, finish)
+    population = 1
+    (start..finish).each do |year|
+        if years[year]
+            population += years[year][:change] 
+            years[year][:population] = population
+        end
+    end
+    years
+end
+
 # puts most_living_brut(people)
-puts most_living_dry(people)
+puts most_living_helpers(people)
 
