@@ -1,5 +1,5 @@
 people = 
-    {
+   [ {
         born: 1824,
         died: 1900
     },
@@ -10,7 +10,7 @@ people =
     {
         born: 1878,
         died: 1898
-    }
+    }]
 
 
 
@@ -18,5 +18,9 @@ people =
 def most_living(people)
     years = {}
     (1800..2000).each do |year|
+        years[year] = people.select 
     end
+    puts years.inspect
 end
+
+most_living(people)
