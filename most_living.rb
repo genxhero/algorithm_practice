@@ -1,5 +1,4 @@
-
-const people = [
+people = 
     {
         born: 1824,
         died: 1900
@@ -12,13 +11,12 @@ const people = [
         born: 1878,
         died: 1898
     }
-]
 
 
 
-const mostLiving = (people) => {
 
-    const years = {}
-
-
-}
+def most_living(people)
+    years = {}
+    (1800..2000).each do |year|
+    end
+end
