@@ -50,9 +50,22 @@ end
 
 
 def most_living_dry(people)
-    start = people.min_by {|k| k[:born]}[:born]
-    finish = people.max_by{|k| k[:died] }[:died]
-    "Start: #{start} Finish: #{finish}"
+    start = people.min_by { |k| k[:born] }[:born]
+    finish = people.max_by{ |k| k[:born] }[:born]
+    years = {}
+    (people).each do |person|
+        years[person[:born]] ? years[person[:born]][:change] += 1 : years[person[:born]] = {change: 1}
+        years[person[:died] + 1] ? years[person[:died] +1 ][:change] -= 1 : years[person[:died] +1] = {change: -1}
+    end
+    population = 0
+    puts years.inspect
+    (years).each do |year| 
+        puts "Before checking population in year #{year}"
+        population += years[year][:change] 
+        puts "Curent year: #{year}, population: #{population}"
+        years[year][:population] = population 
+    end
+    years.inspect
 end
 
 # puts most_living_brut(people)
