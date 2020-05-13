@@ -4,10 +4,28 @@
 
 class MyIterator 
 
-    def next()
+    attr_reader :result 
+    def initialize(array)
+        @result = [];
+        @array = array;
     end
 
-    def hasNext()
+    def iterate
+        size = @array.reduce {|accumulator, i| accumulator + i}.length
+        size.times do
+            self.next
+        end
+        @result.sort!
+    end
+
+    def next
+        @result += @array.pop if has_next?
+       
+    end
+
+    def has_next?
+        return false if @array.empty? 
+            true 
     end
 
 end
@@ -20,4 +38,8 @@ def iterator(matrix)
     combined.sort
 end
 
-puts iterator([[1,5,7], [2,3,10],[4,6,9]]).inspect
+# puts iterator([[1,5,7], [2,3,10],[4,6,9]]).inspect
+
+iterman = MyIterator.new([[1,5,7], [2,3,10],[4,6,9]])
+iterman.iterate
+puts iterman.result.inspect
