@@ -21,13 +21,10 @@ const subCypher = (message, key) => {
         }
         let char = key[i];
 
-
-        if (!cypher[library[i]] && !specials[char]) {
+        if (!cypher[library[count]] && !specials[char]) {
          
-            console.log("I", i, "Library[i]:", library[i], "count: ", count)
-
-            cypher[library[i].toUpperCase()] = char.toUpperCase();
-            cypher[library[i].toLowerCase()] = char.toLowerCase();
+            cypher[library[count].toUpperCase()] = char.toUpperCase();
+            cypher[library[count].toLowerCase()] = char.toLowerCase();
             count += 1;
 
         
@@ -55,4 +52,4 @@ const message2 = "Would you kindly?";
 
 console.log(subCypher(message1, key1));
 
-// console.log(subCypher(message2, key1));
+ console.log(subCypher(message2, key1));
