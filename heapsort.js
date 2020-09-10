@@ -1,7 +1,7 @@
 function heap_root(input, i) {
-    var left = 2 * i + 1;
-    var right = 2 * i + 2;
-    var max = i;
+    let left = 2 * i + 1;
+    let right = 2 * i + 2;
+    let max = i;
 
     if (left < array_length && input[left] > input[max]) {
         max = left;
@@ -18,7 +18,7 @@ function heap_root(input, i) {
 }
 
 function swap(input, index_A, index_B) {
-    var temp = input[index_A];
+    let temp = input[index_A];
 
     input[index_A] = input[index_B];
     input[index_B] = temp;
@@ -28,7 +28,7 @@ function heapSort(input) {
 
     array_length = input.length;
 
-    for (var i = Math.floor(array_length / 2); i >= 0; i -= 1) {
+    for (let i = Math.floor(array_length / 2); i >= 0; i -= 1) {
         heap_root(input, i);
     }
 
@@ -41,6 +41,6 @@ function heapSort(input) {
     }
 }
 
-var arr = [3, 0, 2, 5, -1, 4, 1];
+let arr = [3, 0, 2, 5, -1, 4, 1];
 heapSort(arr);
 console.log(arr);
