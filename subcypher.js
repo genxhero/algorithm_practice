@@ -30,7 +30,6 @@ const subCypher = (message, key) => {
         
         }
     }
-
     let res = "";
     for (let c = 0; c < message.length; c++) {
         if (specials[message[c]]) {
