@@ -24,12 +24,16 @@ const findSubArrays = array => {
     let res = [array];
     while (length < array.length) {   
       for (let start = 0; start < array.length; start++) {
-        res.push(array.slice(start, length))
+        let current = array.slice(start, length);
+        res.push(current)
       } 
       length += 1
     }
     return res;
 }
+
+console.log(findSubArrays(user1))
+//["/start", "/pink", "/register", "/orange", "/red", "a"];
 
 // const findMaxByLength = arrayOfObjects => {
 //   for (let i)
