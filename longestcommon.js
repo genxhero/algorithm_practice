@@ -21,8 +21,8 @@ const findContiguousHistory = (userA, userB) => {
 const findSubArrays = array => {
     //Finds sub arrays of various lengths using the window method
     let length = 1;
-    let res = [array];
-    while (length < array.length) {   
+    let res = [];
+    while (length < array.length + 1) {   
       for (let start = 0; start < array.length; start++) {
         let current = array.slice(start, length);
         if (current.length > 0) {res.push(current)}
