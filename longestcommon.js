@@ -25,7 +25,7 @@ const findSubArrays = array => {
     while (length < array.length) {   
       for (let start = 0; start < array.length; start++) {
         let current = array.slice(start, length);
-        res.push(current)
+        if (current.length > 0) {res.push(current)}
       } 
       length += 1
     }
