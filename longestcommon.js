@@ -20,6 +20,15 @@ const findContiguousHistory = (userA, userB) => {
 
 const findSubArrays = array => {
     //Finds sub arrays of various lengths using the window method
+    let length = 1;
+    let res = [array];
+    while (length < array.length) {   
+      for (let start = 0; start < array.length; start++) {
+        res.push(array.slice(start, length))
+      } 
+      length += 1
+    }
+    return res;
 }
 
 // const findMaxByLength = arrayOfObjects => {
