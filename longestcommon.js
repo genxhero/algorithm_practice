@@ -32,9 +32,9 @@ const findSubArrays = array => {
     return res;
 }
 
-console.log(findSubArrays(user1))
+// console.log(findSubArrays(user1))
 //["/start", "/pink", "/register", "/orange", "/red", "a"];
 
-// const findMaxByLength = arrayOfObjects => {
-//   for (let i)
-// }
+ const findMaxByLength = arrayOfObjects => {
+   
+ }
