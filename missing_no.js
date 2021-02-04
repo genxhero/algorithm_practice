@@ -1,5 +1,8 @@
+/**
+ * Given an array of integers, find the lowest missing number.
+ * @param {Array} array 
+ */
 const missingNumber = (array) => {
-    // write your code in JavaScript (Node.js 8.9.4)
     //Edge case: if the biggest number is less than one, return one
     let sorted = array.sort((a, b) => b - a)
     if (sorted[0] <= 0 ) {
