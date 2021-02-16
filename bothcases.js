@@ -1,4 +1,4 @@
-const isBalanced = (string) => {
+const bothCases = (string) => {
     let hash = {};
     for (let i = 0; i < string.length; i++) {
         hash[string[i]] = true;
@@ -12,5 +12,5 @@ const isBalanced = (string) => {
     return true;
 }
 
-console.log("AbBa should be balanced (expect true): ", isBalanced("AbBa"))
-console.log("AbBaC should not be balanced (expect false): ", isBalanced("AbBaC"))
+console.log("AbBa has both for all(expect true): ", bothCases("AbBa"))
+console.log("AbBaC only has C be uppercase (expect false): ", bothCases("AbBaC"))
