@@ -1,3 +1,8 @@
+/**
+ * Author: Aaron Russell Goddard
+ * @param {} string 
+ */
+
 const bothCases = (string) => {
     let hash = {};
     for (let i = 0; i < string.length; i++) {
